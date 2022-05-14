@@ -189,12 +189,11 @@ public class DoublyLinkedList {
   }
 
   public void sumPrint() { // prints the sum returned from the sum method
-    System.out.println("Sum of list: " + sum(head));
+    System.out.println("Sum: " + sum(head));
   }
 
   public void print() { // prints out the linked list
     Node cursor = head;
-    System.out.print("Linked List: ");
     while (cursor != null) { // traverse through the entire linked list
       System.out.print(cursor.getData());
       if (cursor.getNext() == null) {
@@ -207,7 +206,6 @@ public class DoublyLinkedList {
 
   public void ReversePrint() { // prints the list in reverse
     Node cursor = tail;
-    System.out.print("\nDoubly Linked List in Reverse: ");
     while (cursor != null) { // traverse through the linked list using getPrev()
       System.out.print(cursor.getData());
       if (cursor.getPrev() == null) {
@@ -248,6 +246,7 @@ public class DoublyLinkedList {
     myList.add(0);
     myList.add(340);
 
+    System.out.print("Linked List: ");
     myList.print();
     System.out.println("\nSize: " + myList.size()); // print current size of DLL, return 15
 
@@ -266,7 +265,9 @@ public class DoublyLinkedList {
 
     System.out.println("Head of Doubly Linked List: " + myList.getHead()); // return head of the list, returns 27
 
+    System.out.print("Linked List: ");
     myList.print();
+    System.out.print("\nLinked List in reverse: ");
     myList.ReversePrint();
 
     System.out.println("Size: " + myList.size()); // print current size of DLL, returns 12
